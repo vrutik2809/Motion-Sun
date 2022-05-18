@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Sun's Motion</title>
+</head>
+<body>
+    <fieldset class="data_container" id="sun_trajectory">
+        <legend>Sun's Trajectory</legend>
+        <table>
+            <tr>
+                <td>Latitude</td>
+                <td><input type="number" step="0.01" class="latitude" id="latitude_sun_trajectory" value="0"></td>
+                <td><input type="radio" name="angle_unit_sun_trajectory" class="deg" id="deg_sun_trajectory" checked> Degrees</td>
+                <td><input type="radio" name="angle_unit_sun_trajectory" class="rad" id="rad_sun_trajectory"> Radians</td>
+                <td><button id="set_current_latitude_sun_trajectory">Use current location</button></td>
+            </tr>
+            <tr>
+                <td>Day</td>
+                <td>
+                    <select id="month_sun_trajectory">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="day_sun_trajectory">
+                    </select>
+                </td>
+				<td><button id="set_current_day_sun_trajectory">Use current date</button></td>
+            </tr>
+        </table>
+        <button id="generate_sun_trajectory">Generate Sun Trajectory</button>
+        <div class="chart_container" id="chart_sun_trajectory"></div>
+    </fieldset> 
+    <fieldset class="data_container" id="sun_max_elevation">
+        <legend>Sun's Maximum Elevation</legend>
+        <table>
+            <tr>
+                <td>Latitude</td>
+                <td><input type="number" step="0.01" class="latitude" id="latitude_sun_max_elevation" value="0"></td>
+                <td><input type="radio" name="angle_unit_sun_max_elevation" class="deg" id="deg_sun_max_elevation" checked> Degrees</td>
+                <td><input type="radio" name="angle_unit_sun_max_elevation" class="rad" id="rad_sun_max_elevation"> Radians</td>
+                <td><button id="set_current_latitude_sun_max_elevation">Use current location</button></td>
+            </tr>
+        </table>
+        <button id="generate_sun_max_elevation">Generate Sun Max Elevation</button>
+        <div class="chart_container" id="chart_sun_max_elevation"></div>
+    </fieldset>
+    <script src="./js/utils.js"></script>
+    <script src="./js/logic.js"></script>
+    <script src="./js/validation.js"></script>
+</body>
+</html>
